@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<header>
+  <div>
+    <div class=" w-3/4 bg-amber-100 navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Link</a></li>
+          <li>
+            <details>
+              <summary>
+                Parent
+              </summary>
+              <ul class="p-2 bg-base-100">
+                <li><a>Link 1</a></li>
+                <li><a>Link 2</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<body>
+  <!--container    -->
+  <div class="flex flex-grid flex-col lg:flex-row mx-8">
+    <!---ship container    -->
+    <div class=" flex-1 grid grid-cols-1 md:grid-cpls-2 lg:grid-cols-4 gap-6 ">
+      <!--Triangle Card-->
+      <div class="card w-56 bg-lime-100 m-8 shadow=xl">
+        <figure> <img src="../images/triangle.png" alt=""> </figure>
+        <div class="card-body">
+          <h2 class="card-title">Triangle</h2>
+          <p>Area (A) = 0.5 x b x h </p>
+          <p>
+            <input type="text" class="border bg-grey-200 text-xl w-24 px-2" placeholder="base" name=""
+              id="triangle-base">
+            <span class="ml-2">em</span>
+            <!--tiangle height-->
+            <input type="text" class="ml-4 border bg-grey-200 text-xl w-24 px-2" placeholder="height" name=""
+              id="triangle-hight">
+            <span class="ml-2">em</span>
+          </p>
+          <p class="text-2xl">Area: <span id="triangle-area">0</span> em <sup>2</sup> </p>
+          <div class="card-actions">
+            <button onclick="calculateTriangleArea(this)" class="btn btn-primary w-fll">Calculate</button>
+
+          </div>
+        </div>
+      </div>
+      <!---rectangle card-->
+      <div class="card w-56 bg-blue-500 m-8 shadow=xl">
+        <figure> <img src="../images/rectangle.png" alt=""> </figure>
+        <div class="card-body">
+          <h2 class="card-title">Triangle</h2>
+          <p>Area (A) = 0.5 x b x h </p>
+          <p>
+            <input type="text" class="border bg-grey-200 text-xl w-24 px-2" placeholder="base" name=""
+              id="triangle-base">
+            <span class="ml-2">em</span>
+            <!--tiangle height-->
+            <input type="text" class="ml-4 border bg-grey-200 text-xl w-24 px-2" placeholder="height" name=""
+              id="triangle-hight">
+            <span class="ml-2">em</span>
+          </p>
+          <p class="text-2xl">Area: <span id="triangle-area">0</span> em <sup>2</sup> </p>
+          <div class="card-actions">
+            <button onclick="calculateTriangleArea(this)" class="btn btn-primary w-fll">Calculate</button>
+
+          </div>
+        </div>
+      </div>
+      <!--parall-->
+      <div class="card w-56 m-8 bg-fuchsia-300 shadow=xl">
+        <figure> <img src="../images/parallelogram.png" alt=""> </figure>
+        <div class="card-body">
+          <h2 class="card-title">Paragram</h2>
+          <p>Area (A) = b x h </p>
+          <p>
+            <input type="text" class="border bg-grey-200 text-xl w-24 px-2" placeholder="base" name=""
+              id="paragram-base">
+            <span class="ml-2">em</span>
+            <!--paragram height-->
+            <input type="text" class="ml-4 border bg-grey-200 text-xl w-24 px-2" placeholder="height" name=""
+              id="paragram-hight">
+            <span class="ml-2">em</span>
+          </p>
+          <p class="text-2xl">Area: <span id="paragram-area">0</span> em <sup>2</sup> </p>
+          <div class="card-actions">
+            <button onclick="calculateParagramArea()" class="btn btn-primary w-fll">Calculate para</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="card w-56 m-8 bg-green-300 shadow=xl">
+        <div class="card-body">
+          <h2 class="card-title">Area Calculation</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="parallel.js"></script>
+</body>
+
+</html>
